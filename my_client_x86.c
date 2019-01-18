@@ -38,7 +38,7 @@ int getData( int sockfd ) {
 int main(int argc, char *argv[])
 {
     int sockfd, portno = 51717, n;
-    char serverIp[] = "10.110.7.66/";
+    char serverIp[] = "10.110.7.66";
     struct sockaddr_in serv_addr;
     struct hostent *server;
     char buffer[256];
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
       data = getData( sockfd );
       printf("%d ->  %d\n",n, data );
     }
-    sendData( sockfd, -1 );
+    sendData( sockfd, -2 );
 
     close( sockfd );
     return 0;
