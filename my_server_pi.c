@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
   
      //--- infinite wait on a connection ---
      while ( 1 ) {
-        printf( "WAITING for new client...\n" );
+        printf( "WAITING FOR new client...\n" );
         if ( ( newsockfd = accept( sockfd, (struct sockaddr *) &cli_addr, (socklen_t*) &clilen) ) < 0 )
             error( const_cast<char *>("ERROR on accept") );
         printf( "opened new communication with client\n" );
