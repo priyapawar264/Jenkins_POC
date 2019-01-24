@@ -60,7 +60,9 @@ int main(int argc, char *argv[]) {
        error( const_cast<char *>( "ERROR on binding" ) );
      listen(sockfd,5);
      clilen = sizeof(cli_addr);
-  
+ 
+     printf("Program Name Is: %s",argv[0]);
+     printf("Executing on NODE_ID: %s and PROC_ID: %d", argv[1], atoi(argv[2])");
      //--- infinite wait on a connection ---
      while ( 1 ) {
         printf( "WAITING FOR NEW CLIENT...\n" );
